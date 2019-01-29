@@ -1,4 +1,4 @@
-
+int size = 600;
 public void setup()
 {
   size(600,600);
@@ -6,9 +6,13 @@ public void setup()
 }
 public void draw()
 {
-  fill(255);
-  noStroke();
-  sierpinski(0,600,600);
+  background(0);
+  noFill();
+  stroke(255);
+  sierpinski(0,600,size);
+  size=size+5;
+  if(size==1200)
+    size=600;
 }
 
 public void sierpinski(double x, double y, double len) 
