@@ -1,4 +1,4 @@
-int size = 600;
+int mySize = 600;
 int n = 0;
 int x = 0;
 public void setup()
@@ -13,7 +13,7 @@ public void draw()
   noFill();
   stroke(255);
   sierpinski(0,600,600);
-  size=size/2;
+  mySize=mySize/2;
   textSize(22);
   text((int)(Math.pow(4,n)),10,25);
   n++;
@@ -21,7 +21,7 @@ public void draw()
 
 public void sierpinski(double x, double y, double len) 
 {
-  if(len<=size)
+  if(len<=mySize)
     triangle((float)x,(float)y,(float)(x+len),(float)y,(float)(x+len/2),(float)(y-len));
   else
   {
